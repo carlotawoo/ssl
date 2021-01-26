@@ -1,30 +1,38 @@
 package com.example.demo.controller;
 
-import com.alibaba.fastjson.JSONObject;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
-import org.springframework.util.MultiValueMap;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.Map;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
-@RestController
+@Controller
 public class LoginController {
     @Autowired
     RestTemplate restTemplate;
 
     @GetMapping("/login")
+    @ResponseBody
     public String login(){
+      return "success";
+    }
 
-        String DetailProject = restTemplate.exchange("http://172.20.10.29:8888/api/v1/obu/findALlType9",
+    @GetMapping("/turn")
+    public void turn(HttpServletResponse response) throws IOException {
+        response.sendRedirect("https://cn.bing.com/");
+    }
+
+    @GetMapping("/getHttp")
+    @ResponseBody
+    public String getHttp() throws IOException {
+        String DetailProject = restTemplate.exchange("http://172.168.1.179:8686/dataStandard/queryDataStandLogicCata?user=3",
                 HttpMethod.GET,
                 null, String.class).getBody();
-
         return DetailProject;
-
     }
 }
