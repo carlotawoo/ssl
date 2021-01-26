@@ -8,3 +8,8 @@ springboot配置http以及https
 
 生成免费的ssl文件命令：
 keytool -genkeypair -alias hellowood -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore hellowood.p12 -validity 3650
+
+方法二：
+可参考：
+
+https://www.cnblogs.com/liuyangjava/p/13488751.html
