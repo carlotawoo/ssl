@@ -1,3 +1,4 @@
+/*
 package com.example.demo.config;
 
 import org.apache.catalina.Context;
@@ -8,10 +9,12 @@ import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+*/
 /**
  * 开启多个连接器（同时支持http和https）
- * @author chenbin
- */
+ * 方法一
+ *//*
+
 @Configuration
 public class MultiConnectorsConfiguration {
     @Value("${server.http.port}")
@@ -43,3 +46,4 @@ public class MultiConnectorsConfiguration {
     }
 
 }
+*/
