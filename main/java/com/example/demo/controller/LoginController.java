@@ -1,3 +1,4 @@
+/*
 package com.example.demo.controller;
 
 
@@ -20,7 +21,7 @@ public class LoginController {
     @Autowired
     RestTemplate restTemplate;
 
-    @GetMapping("/login")
+    @GetMapping("/logintest")
     @ResponseBody
     public Object login(){
         System.out.println("访问到了****");
@@ -45,4 +46,6 @@ public class LoginController {
                 null, String.class).getBody();
         return DetailProject;
     }
+
 }
+*/

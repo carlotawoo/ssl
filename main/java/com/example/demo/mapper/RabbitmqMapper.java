@@ -11,7 +11,9 @@ public class RabbitmqMapper {
 
     public void sendWork() {
         for (int i = 0; i < 10; i++) {
-            rabbitTemplate.convertAndSend("queue_work", "测试work模型: " + i);
+           // rabbitTemplate.convertAndSend("queue_work", "测试work模型: " + i);
+            rabbitTemplate.convertAndSend("queue_fanout1", "测试work模型: " + i);
+
         }
     }
 

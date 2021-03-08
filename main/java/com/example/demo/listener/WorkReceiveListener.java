@@ -1,3 +1,4 @@
+/*
 package com.example.demo.listener;
 
 import com.rabbitmq.client.Channel;
@@ -42,4 +43,4 @@ public class WorkReceiveListener {
     public void receiveTop2(String msg) {
         System.out.println("消费者2接收到：" + msg);
     }
-}
+}*/
