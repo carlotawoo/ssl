@@ -1,13 +1,10 @@
-/*
 package com.example.demo.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import javax.servlet.http.HttpServletResponse;
@@ -17,11 +14,12 @@ import java.util.Map;
 
 @Controller
 @CrossOrigin
+@RequestMapping("/loginController/")
 public class LoginController {
     @Autowired
     RestTemplate restTemplate;
 
-    @GetMapping("/logintest")
+    @GetMapping("logintest")
     @ResponseBody
     public Object login(){
         System.out.println("访问到了****");
@@ -32,13 +30,13 @@ public class LoginController {
     }
 
 
-    @GetMapping("/turn")
+    @GetMapping("turn")
     public void turn(HttpServletResponse response) throws IOException {
         response.sendRedirect("https://cn.bing.com/");
     }
 
 
-    @GetMapping("/getHttp")
+    @GetMapping("getHttp")
     @ResponseBody
     public String getHttp() throws IOException {
         String DetailProject = restTemplate.exchange("http://172.168.1.179:8686/dataStandard/queryDataStandLogicCata?user=3",
@@ -48,4 +46,3 @@ public class LoginController {
     }
 
 }
-*/
