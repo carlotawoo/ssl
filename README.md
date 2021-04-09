@@ -13,3 +13,6 @@ keytool -genkeypair -alias hellowood -keyalg RSA -keysize 2048 -storetype PKCS12
 可参考：
 
 https://www.cnblogs.com/liuyangjava/p/13488751.html
+
+
+添加shiro  以及部分Lamdba表达式
